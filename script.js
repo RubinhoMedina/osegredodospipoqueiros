@@ -1,31 +1,68 @@
-const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-$$('.faq-q').forEach((button) => {
-  button.addEventListener('click', () => {
-    const answer = button.nextElementSibling;
-    const isOpen = answer.classList.contains('open');
-    $$('.faq-a').forEach((item) => item.classList.remove('open'));
-    $$('.faq-q span').forEach((span) => (span.textContent = '+'));
-    if (!isOpen) {
-      answer.classList.add('open');
-      button.querySelector('span').textContent = '−';
-    }
+const menuBtn = $('[data-menu-btn]');
+const nav = $('[data-nav]');
+if (menuBtn && nav) {
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
   });
-});
+  $$('.nav a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+}
 
-$$('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const target = document.querySelector(link.getAttribute('href'));
+$$('[data-scroll]').forEach(link => {
+  link.addEventListener('click', evt => {
+    const href = link.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    const target = $(href);
     if (!target) return;
-    event.preventDefault();
+    evt.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.14 });
+const sticky = $('[data-sticky-cta]');
+const offer = $('#oferta');
+if (sticky) {
+  const onScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    const offerTop = offer ? offer.getBoundingClientRect().top + y : Infinity;
+    if (y > 650 && y < offerTop - 280) sticky.classList.add('show');
+    else sticky.classList.remove('show');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
 
-$$('.reveal, section').forEach((element) => revealObserver.observe(element));
+// FAQ: deixa só uma pergunta aberta por vez no mobile
+$$('.faq details').forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (!item.open) return;
+    $$('.faq details').forEach(other => {
+      if (other !== item) other.open = false;
+    });
+  });
+});
+
+// Animação leve de entrada nos cards
+const cards = $$('.pain-item, .secret-cards article, .feature-list div, .audience-grid article, .bonus-card, .phone-preview figure');
+if ('IntersectionObserver' in window) {
+  cards.forEach(card => card.classList.add('will-reveal'));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  cards.forEach(card => obs.observe(card));
+}
+
+const style = document.createElement('style');
+style.textContent = `.will-reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}.will-reveal.revealed{opacity:1;transform:none}`;
+document.head.appendChild(style);

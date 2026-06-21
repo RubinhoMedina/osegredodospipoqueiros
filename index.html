@@ -4,155 +4,222 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>O Segredo dos Pipoqueiros | Pipoca Gourmet Crocante</title>
-  <meta name="description" content="Aprenda o truque por trás da pipoca gourmet crocante, bonita e cheirosa, usando panela comum e ingredientes simples." />
+  <meta name="description" content="Aprenda o truque simples para fazer pipoca gourmet crocante, bonita e deliciosa com leite em pó, usando panela comum e ingredientes fáceis de encontrar." />
   <meta name="theme-color" content="#5A0B0B" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/hero-popcorn.webp" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar" id="top">
+  <header class="topbar" data-header>
     <a class="brand" href="#top" aria-label="O Segredo dos Pipoqueiros">
-      <span class="brand-mark">🍿</span>
-      <span>O Segredo dos Pipoqueiros</span>
+      <span class="brand-icon" aria-hidden="true">🍿</span>
+      <span><strong>O Segredo dos</strong><b>Pipoqueiros</b></span>
     </a>
-    <a class="top-cta" href="#oferta">Acessar</a>
+    <button class="menu-btn" data-menu-btn aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" data-nav>
+      <a href="#problema">Problema</a>
+      <a href="#recebe">O que recebe</a>
+      <a href="#bonus">Bônus</a>
+      <a href="#oferta">Oferta</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero section-light">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Receita guiada + bônus de venda</p>
-        <h1>Aprenda o truque para fazer pipoca gourmet crocante, bonita e cheirosa.</h1>
-        <p class="lead">Sem pipoqueira. Sem ingrediente difícil. Sem ficar no achômetro tentando descobrir o ponto.</p>
-        <div class="hero-points">
-          <span>✓ Panela comum</span>
-          <span>✓ Passo a passo claro</span>
-          <span>✓ Para casa ou venda</span>
+  <main id="top">
+    <section class="hero section-cream">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Receita testada e aprovada</div>
+          <h1>Aprenda o truque simples para fazer <span>pipoca gourmet crocante, bonita e deliciosa</span></h1>
+          <p class="lead">Com leite em pó, usando panela comum e ingredientes fáceis de encontrar.</p>
+          <p class="support">Pare de tentar no achômetro. Siga uma receita guiada, simples e direta para acertar o ponto sem complicação.</p>
+          <ul class="check-list compact">
+            <li>Feita na panela comum</li>
+            <li>Ingredientes simples</li>
+            <li>Passo a passo fácil</li>
+            <li>Ideal para fazer em casa ou vender</li>
+          </ul>
+          <a class="cta primary" href="#oferta" data-scroll>Quero aprender o truque agora</a>
+          <p class="safe-note">🔒 Acesso imediato após a confirmação da compra</p>
         </div>
-        <a class="btn btn-primary" href="#oferta">Quero aprender agora</a>
-        <p class="microcopy">Acesso digital imediato após a compra.</p>
-      </div>
-
-      <div class="hero-card reveal" aria-label="Pipoca gourmet pronta">
-        <div class="steam"><i></i><i></i><i></i></div>
-        <div class="popcorn-bowl">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
-          <strong>Pipoca Gourmet</strong>
+        <div class="hero-visual">
+          <div class="photo-card">
+            <img src="assets/hero-popcorn.webp" alt="Pipoca gourmet crocante em tigela vermelha, ainda quentinha" width="720" height="720" />
+            <div class="seal">Crocante<br><b>e bonita</b></div>
+          </div>
         </div>
-        <div class="scent-card">Cheiro de pipoca doce que dá vontade de provar.</div>
       </div>
     </section>
 
-    <section class="pain section-wine">
-      <p class="eyebrow light">Você já tentou e não ficou igual?</p>
-      <h2>Sua pipoca doce queima, mela ou fica borrachuda?</h2>
-      <p>Muita gente erra não por falta de talento. Erra porque não sabe a ordem certa, o ponto certo e a hora certa de finalizar.</p>
-      <div class="cards two">
-        <article class="card danger"><b>✕</b><span>O açúcar queima no fundo</span></article>
-        <article class="card danger"><b>✕</b><span>O leite em pó não gruda</span></article>
-        <article class="card danger"><b>✕</b><span>A pipoca fica murcha</span></article>
-        <article class="card danger"><b>✕</b><span>Não fica com cara de gourmet</span></article>
-      </div>
-    </section>
-
-    <section class="secret section-cream">
-      <p class="eyebrow">O grande mecanismo</p>
-      <h2>O segredo começa antes do leite em pó.</h2>
-      <p class="section-text">Existe uma combinação simples no preparo que ajuda a pipoca chegar no ponto certo. Dentro do material, você vê a ordem completa, sem adivinhar e sem pular etapa.</p>
-      <div class="secret-box">
-        <div><strong>1</strong><span>Ordem certa dos ingredientes</span></div>
-        <div><strong>2</strong><span>Ponto certo da panela</span></div>
-        <div><strong>3</strong><span>Finalização na hora certa</span></div>
-      </div>
-      <p class="blur-note">A página não entrega o passo completo aqui. O material mostra exatamente quando fazer cada etapa.</p>
-    </section>
-
-    <section class="receive section-light">
-      <p class="eyebrow">O que você recebe</p>
-      <h2>Um passo a passo simples para abrir no celular e seguir na cozinha.</h2>
-      <div class="check-list">
-        <p>✓ Ingredientes na medida certa</p>
-        <p>✓ Utensílios necessários</p>
-        <p>✓ Passo a passo completo</p>
-        <p>✓ Como saber o ponto certo</p>
-        <p>✓ Como aplicar o leite em pó</p>
-        <p>✓ Erros que fazem dar errado</p>
-        <p>✓ Receita resumida para consultar rápido</p>
-      </div>
-    </section>
-
-    <section class="audience section-wine">
-      <p class="eyebrow light">Para quem é</p>
-      <h2>Feito para quem quer resultado simples, bonito e gostoso.</h2>
-      <div class="cards">
-        <article class="card"><b>🏠</b><h3>Fazer em casa</h3><p>Para servir uma pipoca doce que a família elogia.</p></article>
-        <article class="card"><b>👵</b><h3>Agradar filhos e netos</h3><p>Receita fácil para lanche, filme e fim de semana.</p></article>
-        <article class="card"><b>💰</b><h3>Vender por encomenda</h3><p>Com aparência bonita, embalagem certa e preço melhor.</p></article>
-      </div>
-    </section>
-
-    <section class="product section-cream">
-      <p class="eyebrow">Por dentro do material</p>
-      <h2>Você aprende a fazer, embalar e pensar no preço.</h2>
-      <div class="module-stack">
-        <div class="module"><span>01</span><strong>O Segredo dos Pipoqueiros</strong><small>Receita completa, ponto certo e truque final.</small></div>
-        <div class="module"><span>02</span><strong>Bônus 1: Guia de Embalagens</strong><small>Onde comprar saquinhos, potes e copos bolha.</small></div>
-        <div class="module"><span>03</span><strong>Bônus 2: Preços e Lucro</strong><small>Como calcular custo, porção e preço de venda.</small></div>
-      </div>
-    </section>
-
-    <section class="proof section-light">
-      <p class="eyebrow">Por que chama tanta atenção?</p>
-      <h2>Porque parece estranho no começo, mas muda o resultado.</h2>
-      <p class="section-text">O público se surpreende quando descobre que a pipoca gourmet boa não depende só de jogar leite em pó por cima. O que faz diferença é o preparo antes, o ponto e o tempo certo.</p>
-      <div class="quote">“A maioria das pessoas não erra a pipoca. Ela erra o ponto.”</div>
-    </section>
-
-    <section class="offer section-wine" id="oferta">
-      <p class="eyebrow light">Oferta especial</p>
-      <h2>Acesse agora o passo a passo completo.</h2>
-      <div class="price-card">
-        <p class="old-price">De R$ 47,00</p>
-        <p class="new-price">R$ 17,90</p>
-        <p class="pay-note">Pagamento único. Acesso digital imediato.</p>
-        <div class="offer-items">
-          <p>✓ Receita guiada completa</p>
-          <p>✓ Bônus de embalagens</p>
-          <p>✓ Bônus de preços e lucro</p>
-          <p>✓ Garantia de 7 dias</p>
+    <section id="problema" class="pain section-burgundy">
+      <div class="container narrow">
+        <h2>Sua pipoca doce nunca fica como aquela pipoca bonita que vende na rua?</h2>
+        <p class="section-lead">Isso acontece com muita gente. O problema quase sempre está no ponto.</p>
+        <div class="pain-grid">
+          <div class="pain-item"><span>✕</span>Queima no fundo e amarga</div>
+          <div class="pain-item"><span>✕</span>O açúcar passa do ponto</div>
+          <div class="pain-item"><span>✕</span>O leite em pó não gruda</div>
+          <div class="pain-item"><span>✕</span>Fica murcha e sem brilho</div>
+          <div class="pain-item"><span>✕</span>Não fica com cara de loja</div>
         </div>
-        <a class="btn btn-gold" href="https://pay.kiwify.com.br/SEU-LINK-AQUI">Quero acessar agora</a>
+        <p class="gold-line">Pipoca gourmet boa depende de ordem, tempo e temperatura.</p>
+      </div>
+    </section>
+
+    <section id="segredo" class="mechanism section-cream">
+      <div class="container">
+        <div class="section-number">3</div>
+        <h2>O que faz essa pipoca dar certo?</h2>
+        <p class="section-lead">Existe um segredo simples, mas quase ninguém conhece. O material mostra o ponto certo, sem entregar você ao achômetro.</p>
+        <div class="secret-cards">
+          <article>
+            <span class="icon drop">●</span>
+            <h3>Um detalhe no começo</h3>
+            <p>Uma pequena diferença antes do fogo muda o resultado.</p>
+          </article>
+          <article>
+            <span class="icon clock">◷</span>
+            <h3>Um ponto que muita gente erra</h3>
+            <p>Existe uma hora certa de parar, tampar e finalizar.</p>
+          </article>
+          <article>
+            <span class="icon bowl">🍿</span>
+            <h3>Uma finalização no momento certo</h3>
+            <p>É aqui que a pipoca ganha brilho, crocância e cara de gourmet.</p>
+          </article>
+        </div>
+        <p class="micro-center">No passo a passo completo você aprende tudo, sem pular etapas.</p>
+        <a class="cta secondary" href="#oferta" data-scroll>Quero aprender o truque agora</a>
+      </div>
+    </section>
+
+    <section id="recebe" class="receive section-white">
+      <div class="container">
+        <div class="section-number">4</div>
+        <h2>O que você recebe</h2>
+        <p class="section-lead">Um passo a passo simples para acertar sem adivinhar.</p>
+        <div class="feature-list">
+          <div><span>🎁</span>Ingredientes na medida certa</div>
+          <div><span>🍴</span>Utensílios necessários</div>
+          <div><span>📋</span>Passo a passo completo</div>
+          <div><span>⏱</span>Ponto certo da panela</div>
+          <div><span>🥄</span>Como aplicar o leite em pó</div>
+          <div><span>✕</span>Erros que fazem a pipoca dar errado</div>
+          <div><span>🍿</span>Como deixar mais bonita e crocante</div>
+          <div><span>📌</span>Receita resumida para consulta rápida</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="for-whom section-soft">
+      <div class="container">
+        <div class="section-number">5</div>
+        <h2>Esse material é para você que quer...</h2>
+        <div class="audience-grid">
+          <article><span>🏠</span><h3>Fazer em casa</h3><p>Para servir uma pipoca gostosa para a família.</p></article>
+          <article><span>❤️</span><h3>Agradar filhos e netos</h3><p>Com uma receita doce, crocante e fácil.</p></article>
+          <article><span>🛍</span><h3>Vender por encomenda</h3><p>Com aparência bonita e preço mais valorizado.</p></article>
+          <article><span>🌱</span><h3>Começar simples</h3><p>Sem máquina cara, sem curso complicado e sem ingredientes difíceis.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inside section-white">
+      <div class="container">
+        <div class="section-number">6</div>
+        <h2>Veja o que vem dentro</h2>
+        <p class="section-lead">Conteúdo completo, direto ao ponto e fácil de seguir pelo celular.</p>
+        <div class="phone-preview" aria-label="Prévia das páginas internas">
+          <figure><img loading="lazy" src="assets/preview-ingredientes.webp" alt="Página de ingredientes" /><figcaption>Ingredientes e medidas</figcaption></figure>
+          <figure><img loading="lazy" src="assets/preview-passo.webp" alt="Página de passo a passo" /><figcaption>Passo a passo com fotos</figcaption></figure>
+          <figure><img loading="lazy" src="assets/preview-crocante.webp" alt="Página de dicas para ficar crocante" /><figcaption>Ponto certo e finalização</figcaption></figure>
+          <figure><img loading="lazy" src="assets/preview-venda.webp" alt="Página sobre venda" /><figcaption>Dicas para vender</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="bonus" class="bonus section-cream">
+      <div class="container">
+        <div class="section-number">7</div>
+        <h2>Bônus exclusivos</h2>
+        <p class="section-lead">Para transformar a receita em venda.</p>
+        <div class="bonus-grid">
+          <article class="bonus-card">
+            <div class="bonus-tag">Bônus 1</div>
+            <h3>Guia de Embalagens para Pipoca Gourmet</h3>
+            <p>Descubra onde comprar embalagens bonitas para valorizar sua pipoca.</p>
+            <img loading="lazy" src="assets/bonus-embalagens.webp" alt="Bônus guia de embalagens" />
+          </article>
+          <article class="bonus-card">
+            <div class="bonus-tag">Bônus 2</div>
+            <h3>Tabela de Preços e Lucro</h3>
+            <p>Aprenda a calcular custo, escolher porção e vender sem ficar no prejuízo.</p>
+            <img loading="lazy" src="assets/bonus-precos.webp" alt="Bônus tabela de preços e lucro" />
+          </article>
+        </div>
+        <blockquote>“A maioria das pessoas não erra por falta de talento. Erra porque não sabe o ponto certo.”</blockquote>
+      </div>
+    </section>
+
+    <section id="oferta" class="offer section-burgundy">
+      <div class="container offer-box">
+        <div class="offer-copy">
+          <span class="offer-label">Oferta especial</span>
+          <h2>Acesse agora o passo a passo completo</h2>
+          <ul class="check-list">
+            <li>Receita guiada completa</li>
+            <li>Passo a passo visual</li>
+            <li>Dicas para não errar o ponto</li>
+            <li>Lista de erros comuns</li>
+            <li>Dicas para vender</li>
+            <li>Bônus 1: Guia de embalagens</li>
+            <li>Bônus 2: Tabela de preços e lucro</li>
+            <li>Acesso imediato e seguro</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <p class="from">De R$ 47,00</p>
+          <p class="only">Por apenas</p>
+          <div class="price">R$ 17,90</div>
+          <a class="cta primary big" href="https://pay.kiwify.com.br/SEU-LINK-AQUI" target="_blank" rel="noopener">Quero acessar agora</a>
+          <p class="safe-note dark">🔒 Pagamento único e seguro</p>
+        </div>
       </div>
     </section>
 
     <section class="guarantee section-cream">
-      <div class="seal">7 dias</div>
-      <h2>Garantia simples e sem complicação.</h2>
-      <p>Compre, acesse e veja o material com calma. Se sentir que não te ajudou, você pode pedir reembolso dentro de 7 dias.</p>
-    </section>
-
-    <section class="faq section-light">
-      <p class="eyebrow">Dúvidas comuns</p>
-      <h2>Perguntas frequentes</h2>
-      <div class="faq-list">
-        <button class="faq-q">Preciso ter pipoqueira?<span>+</span></button>
-        <div class="faq-a">Não. A receita foi pensada para ser feita em panela comum.</div>
-        <button class="faq-q">Preciso usar milho mushroom?<span>+</span></button>
-        <div class="faq-a">Não. O milho comum funciona. O milho mushroom é apenas um upgrade para deixar a pipoca mais redondinha e bonita para vender.</div>
-        <button class="faq-q">O leite em pó tem medida exata?<span>+</span></button>
-        <div class="faq-a">Não. O material mostra como observar o ponto visual para cobrir bem a pipoca.</div>
-        <button class="faq-q">Serve para vender?<span>+</span></button>
-        <div class="faq-a">Sim. Além da receita, você recebe bônus sobre embalagens e precificação.</div>
+      <div class="container guarantee-grid">
+        <div class="guarantee-seal">7 dias<br><b>garantia</b></div>
+        <div>
+          <h2>Garantia incondicional</h2>
+          <p>Compre, acesse e veja o material com calma. Se sentir que ele não te ajudou, você pode pedir reembolso dentro de 7 dias.</p>
+          <p><strong>Risco seu: zero.</strong> O material só fica com você se fizer sentido para você.</p>
+        </div>
       </div>
     </section>
 
-    <section class="final-cta section-wine">
-      <h2>Pronta para fazer pipoca com cara de loja?</h2>
-      <p>Aprenda o truque, siga o passo a passo e transforme ingredientes simples em uma pipoca crocante, bonita e deliciosa.</p>
-      <a class="btn btn-gold" href="#oferta">Quero aprender agora</a>
+    <section class="faq section-white">
+      <div class="container">
+        <div class="section-number">10</div>
+        <h2>Dúvidas frequentes</h2>
+        <div class="faq-list" data-faq>
+          <details><summary>Preciso ter máquina de pipoca?</summary><p>Não. A receita pode ser feita em panela comum.</p></details>
+          <details><summary>Preciso usar milho mushroom?</summary><p>Não. O milho comum funciona. O milho mushroom é apenas um upgrade para quem quer aparência mais profissional.</p></details>
+          <details><summary>O leite em pó tem medida exata?</summary><p>Não. O certo é colocar o suficiente para cobrir bem toda a pipoca.</p></details>
+          <details><summary>Serve para vender?</summary><p>Sim. Além da receita, você recebe bônus sobre embalagens e cálculo de preço.</p></details>
+          <details><summary>Recebo na hora?</summary><p>Sim. O acesso é liberado após a confirmação da compra.</p></details>
+        </div>
+      </div>
     </section>
   </main>
 
-  <a class="sticky-cta" href="#oferta">Quero o passo a passo</a>
+  <div class="sticky-cta" data-sticky-cta>
+    <span>Pronta para fazer pipoca com cara de loja?</span>
+    <a href="#oferta" data-scroll>Quero aprender agora</a>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

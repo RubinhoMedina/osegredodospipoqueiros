@@ -1,2 +1,1 @@
-# Sem dependências externas obrigatórias.
-# Use Python 3.10+ para rodar app.py
+# Sem dependências externas obrigatórias. Use Python 3 para rodar app.py
